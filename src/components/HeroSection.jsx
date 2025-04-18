@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Heroimage from './images/assets/hero-illustration.png';
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
@@ -48,7 +49,7 @@ const HeroSection = () => {
             <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
               Start Free Trial
             </button>
-            <button className="flex items-center text-red font-semibold hover:underline">
+            <button className="flex items-center text-red-500 font-semibold hover:underline">
               See How It Works
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -63,19 +64,16 @@ const HeroSection = () => {
         </div>
 
         {/* Image Section */}
-        <div
-         
-          className="relative"
-        >
+        <div className="relative">
           <div className="relative">
             <img
-              src="/hero-illustration.svg"
+              src={Heroimage}
               alt="AI tutors helping students"
-              className="w-full h-auto max-w- mx-auto opacity-100"
+              className="w-full h-auto max-w-md mx-auto opacity-100"
             />
           </div>
         </div>
-      </div>  
+      </div>
     </div>
   );
 };
